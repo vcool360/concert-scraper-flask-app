@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Concert Scraper</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5">Concert Data Scraper</h1>
+        <form method="POST" class="mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="city" id="city" name="info_type">
+                <label class="form-check-label" for="city">City</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="date" id="date" name="info_type">
+                <label class="form-check-label" for="date">Date</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="price" id="price" name="info_type">
+                <label class="form-check-label" for="price">Price</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Scrape Data</button>
+        </form>
+        <div>
+            <h3>Results:</h3>
+            <ul class="list-group">
+                {% for item in data %}
+                <li class="list-group-item">
+                    {{ item.city or '' }} {{ item.date or '' }} {{ item.price or '' }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
