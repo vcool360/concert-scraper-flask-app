@@ -1,31 +1,30 @@
 # Concert Scraper Flask App
 
-## Project Overview
+## Overview
 
-This Flask application allows users to scrape concert information, such as city, date, and price, from a locally hosted dummy website. Users can select the type of information they want to scrape via a web interface. Additionally, the app features a subscription form where users can sign up to receive daily email updates on concert prices for their city of choice.
+This small project is a fun exploration into web scraping that I made using Flask. The application allows users to scrape concert data, including city, date, and price, from a dummy site that I created for demonstration purposes. Additionally, users can subscribe to receive daily email updates on concert prices for cities they are interested in.
 
-## Key Features
+## Features
 
-- **Data Scraping**: Extract specific concert information (city, date, price) from a predefined webpage.
-- **User Interactivity**: Web interface allows users to choose what concert data to scrape.
-- **Email Subscription**: Users can subscribe to daily price updates for concerts in a specific city.
+- **Interactive Scraping**: Users can select which pieces of concert data to scrape (city, date, price) through a simple web interface.
+- **Email Notifications**: Provides functionality for users to subscribe to daily price alerts for their chosen city.
 
-## Technologies Used
+## Technologies
 
-- **Flask**: Web framework used to create the application.
-- **BeautifulSoup**: Library for parsing HTML and extracting data.
-- **Flask-Mail**: Extension for sending emails from the Flask app.
-- **APScheduler**: Used to schedule daily email notifications.
+- **Flask**: A lightweight Python web framework used to build the application.
+- **BeautifulSoup**: For parsing HTML and extracting data.
+- **Flask-Mail**: To handle outgoing email notifications.
+- **APScheduler**: For scheduling daily notification jobs.
 
-## Getting Started
+## Setup
 
 ### Prerequisites
 
-Ensure you have Python 3 and pip installed on your system. This project uses virtual environments to manage dependencies.
+You should have Python 3 and pip installed on your system. This project uses virtual environments for dependency management.
 
-### Setting Up the Project
+### Installation
 
-1. **Clone the repository**:
+1. **Clone the Project**:
    ```bash
    git clone https://github.com/your-username/concert-scraper-flask-app.git
    cd concert-scraper-flask-app
